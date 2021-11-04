@@ -45,6 +45,7 @@ body {
   color: white;
   position: absolute;
   left: -65%;
+  transition: left .3s;
 }
 
 .profile {
@@ -91,6 +92,7 @@ body {
   display: inline-block;
   transform: rotate(90deg);
   margin-left: 1rem;
+  transition: transform .3s;
 }
 
 .link-nav.active::before{
@@ -110,9 +112,19 @@ body {
 .list-nav {
   padding-top: 1rem;
 }
+.list-nav-second{
+  visibility: visible;
+  height: 60px;
+  transition: all .2s;
+  opacity: 1;
+}
 
 .hide {
-  display: none;
+  /*display: none;*/
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
 }
 
 .icon {
@@ -130,7 +142,7 @@ body {
 
 .-move .menu{
     left: 0;
-
+    transition: left .3s;
 }
 
 /*CONTENT*/
@@ -138,6 +150,9 @@ body {
 .content{
     position: relative;
     height: 100vh;
+    left: 0;
+    transition: left .3s;
+
 }
 
 .-move .content::before{
@@ -152,5 +167,42 @@ body {
 
 .-move .content{
     left:65% ;
+    transition: left .3s;
 }
+
+/*FECHANDO O MENU*/
+
+.-move .firstLine{
+  transform: translateY(45%) rotate(50deg);
+  transform-origin: top;
+  transition: transform .3s;
+}
+.-move .secondLine{
+  transform: translateX(-110%);
+  
+}
+.-move .thirdLine{
+  transform: translateY(-45%) rotate(-50deg);
+  transform-origin: bottom;
+  transition: transform .3s;
+}
+
+/*TRANSIÇÃO CSS*/
+
+.firstLine{
+  transform: translateY(0) rotate(0deg);
+  transform-origin: top;
+  transition: transform .3s;
+}
+ .secondLine{
+  transform: translateX(0);
+  transition: transform .4s;
+  
+}
+ .thirdLine{
+  transform: translateY(0) rotate(0);
+  transform-origin: bottom;
+  transition: transform .3s;
+}
+
 
