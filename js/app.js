@@ -46,5 +46,21 @@ content.addEventListener('click', function(){
     
 });
 
+/**
+ * BARRA AZUL DE SELEÇÃO
+ */
+
+let linksNav = document.querySelectorAll('.link-nav');
 
 
+linksNav.forEach(function(currentValue){
+    currentValue.addEventListener('click', function(){
+
+        linksNav.forEach(function(currentValue){
+            currentValue.classList.remove('active');
+        })
+
+
+        currentValue.classList.add('active');
+    })
+});

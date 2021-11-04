@@ -81,6 +81,7 @@ body {
   text-decoration: none;
   display: block;
   padding: 1rem;
+  position: relative;
 }
 
 .link-nav-arrow::after {
@@ -92,7 +93,15 @@ body {
   margin-left: 1rem;
 }
 
-
+.link-nav.active::before{
+  content: "";
+  height: 100%;
+  width: 5px;
+  background-color: rgb(42, 133, 238);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .link-nav-arrow.arrow::after{
     transform: rotate(0);
